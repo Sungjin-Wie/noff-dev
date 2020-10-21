@@ -8,7 +8,7 @@ import {
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import NoffLogo from "./Noff.png";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles({
   navbar: {
@@ -19,8 +19,11 @@ const useStyles = makeStyles({
     boxSizing: "unset !important",
   },
   logo: {
-    width: "18%",
+    width: "10rem",
     cursor: "pointer",
+    ["@media (max-width: 960px)"]: {
+      width: "5rem",
+    },
   },
   logoWrapper: {
     margin: 10,
@@ -54,9 +57,18 @@ ElevationScroll.propTypes = {
 
 const Logo = () => {
   const css = useStyles();
+  const history = useHistory();
+  const handleLogoClick = () => {
+    history.push("/#");
+  };
   return (
     <div className={css.logoWrapper}>
-      <img src={NoffLogo} alt="logo" className={css.logo} />
+      <img
+        src={NoffLogo}
+        alt="logo"
+        className={css.logo}
+        onClick={handleLogoClick}
+      />
     </div>
   );
 };
@@ -69,23 +81,11 @@ export default function ElevateAppBar(props) {
       <ElevationScroll {...props}>
         <AppBar className={css.navbar}>
           <Toolbar>
-            <Link href="/#" component={Logo} />
+            <Logo />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
       <Toolbar />
-      {/* <Container>
-        <Box my={2}>
-          {[...new Array(100)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
-            )
-            .join('\n')}
-        </Box>
-      </Container> */}
     </React.Fragment>
   );
 }

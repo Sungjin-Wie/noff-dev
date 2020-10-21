@@ -1,19 +1,19 @@
 import React from "react";
-import { Container } from "@material-ui/core";
+import { Container, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { SoundSlider } from "../components";
+import Footer from "../components/footer";
 
 const useStyles = makeStyles({
   flexbox: {},
   mainContainer: {
     textAlign: "center",
-    // backgroundColor: "#eeeeee",
     marginTop: 100,
   },
   topic: {
     fontSize: "4rem",
     fontWeight: "bold",
-    color: "#deb850",
+    color: "#f7bc26",
     display: "inline-block",
     ["@media (max-width: 800px)"]: {
       fontSize: "2.5rem",
@@ -26,7 +26,8 @@ const useStyles = makeStyles({
     fontSize: "2rem",
     maxWidth: 460,
     ["@media (max-width: 960px)"]: {
-      maxWidth: 300,
+      maxWidth: 360,
+      fontSize: "1.5rem",
     },
   },
   first: {
@@ -38,7 +39,7 @@ const useStyles = makeStyles({
   },
   second: {
     marginTop: "200px",
-    marginLeft: "45vw",
+    marginLeft: "30rem",
     justifyContent: "flex-end",
     marginBottom: "10rem",
     ["@media (max-width: 960px)"]: {
@@ -48,6 +49,7 @@ const useStyles = makeStyles({
   third: {
     width: "inherit",
     textAlign: "center",
+    marginTop: 200,
   },
   blackTopic: {
     fontSize: "3rem",
@@ -70,15 +72,28 @@ const useStyles = makeStyles({
   },
   fifth: { marginTop: 200, textAlign: "center" },
   fifthTopic: {
-    fontSize: "5rem",
+    fontSize: "4rem",
+    fontWeight: "bold",
+    color: "#6a4e02",
     ["@media (max-width: 960px)"]: {
       fontSize: "2.5rem",
     },
   },
   fifthImg: {
-    width: "50vw",
+    width: "30vw",
     ["@media (max-width: 960px)"]: {
       width: "90vw",
+    },
+  },
+  inquiry: {
+    textAlign: "center",
+    marginTop: 100,
+    marginBottom: 50,
+  },
+  inquirybutton: {
+    fontSize: "2rem",
+    ["@media (max-width: 960px)"]: {
+      fontSize: "1.5rem",
     },
   },
 });
@@ -149,8 +164,19 @@ const FifthParagraph = () => {
   const css = useStyles();
   return (
     <div className={css.fifth}>
-      <div className={css.fifthTopic}>어디서든 내 방처럼</div>
+      <div className={css.fifthTopic}>어디서든 내 방처럼,</div>
       <img className={css.fifthImg} src={require("../components/Noff.png")} />
+    </div>
+  );
+};
+
+const Inquiry = () => {
+  const css = useStyles();
+  return (
+    <div className={css.inquiry}>
+      <Button className={css.inquirybutton} size="large" variant="outlined">
+        문의하기
+      </Button>
     </div>
   );
 };
@@ -166,6 +192,8 @@ const Main = () => {
       <SoundSlider />
       <FourthParagraph />
       <FifthParagraph />
+      <Inquiry />
+      <Footer />
     </div>
   );
 };
