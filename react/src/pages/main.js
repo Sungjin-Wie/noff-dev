@@ -82,7 +82,7 @@ const useStyles = makeStyles({
   fifthImg: {
     width: "30vw",
     ["@media (max-width: 960px)"]: {
-      width: "90vw",
+      width: "60vw",
     },
   },
   inquiry: {

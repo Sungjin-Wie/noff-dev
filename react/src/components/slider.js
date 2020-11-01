@@ -1,6 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
 import { makeStyles } from "@material-ui/core/styles";
+import Player from "./audioplayer";
+import cafeBefore from "./cafebefore.wav";
+import cafeAfter from "./cafeafter.wav";
+import parkBefore from "./parkbefore.wav";
+import parkAfter from "./parkafter.wav";
+import subwayBefore from "./subwaybefore.wav";
+import subwayAfter from "./subwayafter.wav";
 
 const useStyles = makeStyles({
   imageWrapper: {
@@ -14,6 +21,15 @@ const useStyles = makeStyles({
       width: "90vw",
     },
   },
+  title: {
+    fontSize: "2.3rem",
+    fontWeight: "bold",
+    color: "black",
+    display: "inline-block",
+    ["@media (max-width: 960px)"]: {
+      fontSize: "1.6rem",
+    },
+  },
 });
 
 const SoundSlider = () => {
@@ -25,17 +41,25 @@ const SoundSlider = () => {
     slidesToScroll: 1,
     adaptiveHeight: true,
   };
+
   return (
-    <div>
-      <Slider {...settings}>
-        <div className={css.imageWrapper}>
-          <img className={css.image} src={require("./bus.jpg")} />
-        </div>
-        <div className={css.imageWrapper}>
-          <img className={css.image} src={require("./bus.jpg")} />
-        </div>
-      </Slider>
-    </div>
+    <Slider {...settings}>
+      <div className={css.imageWrapper}>
+        <div className={css.title}>지하철</div>
+        <img className={css.image} src={require("./subway.jpeg")} />
+        <Player before={subwayBefore} after={subwayAfter} />
+      </div>
+      <div className={css.imageWrapper}>
+        <div className={css.title}>카페</div>
+        <img className={css.image} src={require("./cafe.jpg")} />
+        <Player before={cafeBefore} after={cafeAfter} />
+      </div>
+      <div className={css.imageWrapper}>
+        <div className={css.title}>공원</div>
+        <img className={css.image} src={require("./park.jpg")} />
+        <Player before={parkBefore} after={parkAfter} />
+      </div>
+    </Slider>
   );
 };
 
