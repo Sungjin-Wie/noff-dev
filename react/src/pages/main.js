@@ -2,6 +2,7 @@ import React from "react";
 import { Container, Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { SoundSlider } from "../components";
+import Modal from "../components/modal";
 import Footer from "../components/footer";
 
 const useStyles = makeStyles({
@@ -192,7 +193,7 @@ const Main = () => {
       <SoundSlider />
       <FourthParagraph />
       <FifthParagraph />
-      <Inquiry />
+      <Modal />
       <Footer />
     </div>
   );

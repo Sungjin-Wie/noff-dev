@@ -2,12 +2,12 @@ import React from "react";
 import Slider from "react-slick";
 import { makeStyles } from "@material-ui/core/styles";
 import Player from "./audioplayer";
-import cafeBefore from "./cafebefore.wav";
-import cafeAfter from "./cafeafter.wav";
-import parkBefore from "./parkbefore.wav";
-import parkAfter from "./parkafter.wav";
-import subwayBefore from "./subwaybefore.wav";
-import subwayAfter from "./subwayafter.wav";
+import cafeBefore from "./audio/cafebefore.wav";
+import cafeAfter from "./audio/cafeafter.wav";
+import parkBefore from "./audio/parkbefore.wav";
+import parkAfter from "./audio/parkafter.wav";
+import subwayBefore from "./audio/subwaybefore.wav";
+import subwayAfter from "./audio/subwayafter.wav";
 
 const useStyles = makeStyles({
   imageWrapper: {
