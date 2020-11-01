@@ -113,7 +113,7 @@ export default function TransitionsModal() {
               />
               <div style={{ clear: "both", margin: 10 }}></div>
               <Button
-                className={classes.inquirybutton}
+                className={classes.submitButton}
                 variant="outlined"
                 onClick={handleSubmit}
               >

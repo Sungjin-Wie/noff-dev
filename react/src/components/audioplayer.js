@@ -65,10 +65,9 @@ const IOSSwitch = withStyles((theme) => ({
 
 const useStyles = makeStyles({
   progressBar: {
-    width: "50vw",
+    width: "80vw",
     height: 10,
     borderRadius: 5,
-    marginLeft: "20vw",
     marginRight: 2,
   },
   playButton: {
