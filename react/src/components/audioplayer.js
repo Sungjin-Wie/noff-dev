@@ -65,10 +65,11 @@ const IOSSwitch = withStyles((theme) => ({
 
 const useStyles = makeStyles({
   progressBar: {
-    width: "80vw",
+    width: "60vw",
+    margin: "auto",
     height: 10,
     borderRadius: 5,
-    marginRight: 2,
+    marginTop: 10,
   },
   playButton: {
     width: "4rem",
@@ -114,11 +115,11 @@ function LinearProgressWithLabel({ current, value }) {
         variant="determinate"
         value={value}
       />
-      <Box minWidth={35}>
+      {/* <Box minWidth={35}>
         <Typography variant="body2" color="textSecondary">{`00:${
           current < 10 ? "0" : ""
         }${Math.floor(current)}`}</Typography>
-      </Box>
+      </Box> */}
     </Box>
   );
 }
@@ -160,6 +161,7 @@ const Player = ({ before, after }) => {
         current={musicBefore.currentTime}
         value={normalise(current)}
       />
+      <div style={{ clear: "both" }}></div>
       <IconButton color="primary" onClick={handleButton}>
         {playing ? (
           <PauseCircleFilledIcon className={css.playButton} />

@@ -47,7 +47,11 @@ const SoundSlider = () => {
       <div className={css.imageWrapper}>
         <div className={css.title}>지하철</div>
         <img className={css.image} src={require("./subway.jpeg")} />
-        <Player before={subwayBefore} after={subwayAfter} />
+        <Player
+          className={css.image}
+          before={subwayBefore}
+          after={subwayAfter}
+        />
       </div>
       <div className={css.imageWrapper}>
         <div className={css.title}>카페</div>
