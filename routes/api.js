@@ -1,26 +1,32 @@
 var express = require("express");
 var router = express.Router();
 var cors = require("cors");
-var request = require("request");
+const { default: axios } = require("axios");
+var fetch = require("node-fetch");
+
+let sheet =
+  "https://sheet.best/api/sheets/84343413-ef9a-4f1f-9e95-e291b39df402";
 
 router.get("/", cors(), function (req, response, next) {
-  console.log(req.query);
-  let url =
-    "https://script.google.com/macros/s/AKfycbxHjuWNQAcqLbE7Xj22yKjXXgUJ8qSpzXSyXBUjF7vN6IGoZaY/exec";
-  request.post(
-    {
-      headers: {
-        "content-type": "application/x-www-form-urlencoded",
-      },
-      url: url,
-      body: JSON.stringify(req.query),
-      json: true,
+  let data = [req.query];
+  console.log(data);
+  fetch(sheet, {
+    method: "POST",
+    mode: "cors",
+    headers: {
+      "Content-Type": "application/json",
     },
-    function (error, res, body) {
-      response.send(res);
-      console.log("finished posting");
-    }
-  );
+    body: JSON.stringify(data),
+  })
+    .then((r) => r.json())
+    .then((data) => {
+      // The response comes here
+      console.log(data);
+    })
+    .catch((error) => {
+      // Errors are reported there
+      console.log(error);
+    });
 });
 
 module.exports = router;
