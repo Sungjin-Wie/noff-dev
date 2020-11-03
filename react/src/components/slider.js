@@ -55,7 +55,7 @@ const SoundSlider = () => {
       </div>
       <div className={css.imageWrapper}>
         <div className={css.title}>카페</div>
-        <img className={css.image} src={require("./cafe.jpg")} />
+        <img className={css.image} src={require("./cafe.jpeg")} />
         <Player before={cafeBefore} after={cafeAfter} />
       </div>
       <div className={css.imageWrapper}>

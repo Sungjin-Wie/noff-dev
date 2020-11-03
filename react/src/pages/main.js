@@ -31,6 +31,14 @@ const useStyles = makeStyles({
       fontSize: "1.5rem",
     },
   },
+  paragraphnextline: {
+    fontSize: "1rem",
+    maxWidth: 460,
+    ["@media (max-width: 960px)"]: {
+      maxWidth: 360,
+      fontSize: "0.75rem",
+    },
+  },
   first: {
     marginLeft: "3rem",
     justifyContent: "center",
@@ -51,6 +59,15 @@ const useStyles = makeStyles({
     width: "inherit",
     textAlign: "center",
     marginTop: 200,
+  },
+  changedEnv: {
+    fontSize: "3rem",
+    fontWeight: "bold",
+    color: "black",
+    display: "inline-block",
+    ["@media (max-width: 960px)"]: {
+      fontSize: "1.5rem",
+    },
   },
   blackTopic: {
     fontSize: "3rem",
@@ -136,9 +153,7 @@ const ThirdParagraph = () => {
   const css = useStyles();
   return (
     <div className={css.third}>
-      <div className={css.blackTopic}>변화된 환경을</div>
-      <div className={css.endl}></div>
-      <div className={css.blackTopic}>직접 느껴보세요.</div>
+      <div className={css.changedEnv}>변화된 환경을 직접 느껴보세요.</div>
       <div className={css.endl}></div>
     </div>
   );
@@ -148,15 +163,23 @@ const FourthParagraph = () => {
   const css = useStyles();
   return (
     <div className={css.fourth}>
-      <div className={css.blackTopic}>Noff는 이러한 곳에서</div>
+      <div className={css.blackTopic}>Noff는 통화환경에서만</div>
       <div className={css.endl}></div>
-      <div className={css.blackTopic}>활용이 가능합니다!</div>
+      <div className={css.blackTopic}>활용이 가능할까요?</div>
       <div className={css.endl}></div>
       <div className={css.margin}></div>
       <p className={css.paragraph}>• 회의 때도 조용하게</p>
-      <p className={css.paragraph}>• 어디서든 내 방처럼 조용한 통화</p>
       <p className={css.paragraph}>• 잡음 방해 없는 강의</p>
       <p className={css.paragraph}>• 선명한 채팅을 통한 즐거운 게이밍</p>
+      <p className={css.paragraph}>• 녹음 파일 잡음 제거</p>
+      <p className={css.paragraphnextline}></p>
+      <p className={css.paragraphnextline}>•</p>
+      <p className={css.paragraphnextline}>•</p>
+      <p className={css.paragraphnextline}>•</p>
+      <p className={css.paragraphnextline}></p>
+      <p className={css.paragraph}>
+        Noff는 모든 잡음으로부터의 자유를 추구합니다.{" "}
+      </p>
     </div>
   );
 };
@@ -167,17 +190,6 @@ const FifthParagraph = () => {
     <div className={css.fifth}>
       <div className={css.fifthTopic}>어디서든 내 방처럼,</div>
       <img className={css.fifthImg} src={require("../components/Noff.png")} />
-    </div>
-  );
-};
-
-const Inquiry = () => {
-  const css = useStyles();
-  return (
-    <div className={css.inquiry}>
-      <Button className={css.inquirybutton} size="large" variant="outlined">
-        문의하기
-      </Button>
     </div>
   );
 };
