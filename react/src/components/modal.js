@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Button, Modal, Backdrop, Fade, TextField } from "@material-ui/core";
 import StarRatingComponent from "react-star-rating-component";
 import Axios from "axios";
-let URL = "http://localhost:3000/api?";
+let URL = "http://http://noff.herokuapp.com/api?";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
