@@ -2,6 +2,8 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button, Modal, Backdrop, Fade, TextField } from "@material-ui/core";
 import StarRatingComponent from "react-star-rating-component";
+import Axios from "axios";
+let URL = "http://localhost:3000/api?";
 
 const useStyles = makeStyles((theme) => ({
   modal: {
@@ -63,7 +65,13 @@ export default function TransitionsModal() {
   };
 
   const handleSubmit = () => {
-    console.log("foo");
+    console.log({ rating, value });
+    Axios({
+      method: "GET",
+      url: URL + `rating=${rating}&feedback=${value}`,
+    })
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
     setOpen(false);
   };
   return (

@@ -23,5 +23,3 @@ if (process.env.NODE_ENV === "development") {
 const store = createStore(enhancedReducer, applyMiddleware(...middleware));
 
 export default store;
-
-// export { default as firebaseConfig } from "./firebase.config";

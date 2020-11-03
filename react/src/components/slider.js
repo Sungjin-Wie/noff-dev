@@ -8,6 +8,9 @@ import parkBefore from "./audio/parkbefore.wav";
 import parkAfter from "./audio/parkafter.wav";
 import subwayBefore from "./audio/subwaybefore.wav";
 import subwayAfter from "./audio/subwayafter.wav";
+import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
+import { IconButton } from "@material-ui/core";
 
 const useStyles = makeStyles({
   imageWrapper: {
@@ -32,6 +35,29 @@ const useStyles = makeStyles({
   },
 });
 
+const NextArrow = ({ className, style, onClick }) => {
+  return (
+    <IconButton
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <ArrowForwardIosIcon />
+    </IconButton>
+  );
+};
+const PrevArrow = ({ className, style, onClick }) => {
+  return (
+    <IconButton
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      <ArrowBackIosIcon />
+    </IconButton>
+  );
+};
+
 const SoundSlider = () => {
   const css = useStyles();
   const settings = {
@@ -40,6 +66,8 @@ const SoundSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     adaptiveHeight: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
   };
 
   return (

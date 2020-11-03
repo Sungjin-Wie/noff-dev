@@ -31,6 +31,14 @@ const useStyles = makeStyles({
       fontSize: "1.5rem",
     },
   },
+  paragraphList: {
+    fontSize: "2rem",
+    maxWidth: 540,
+    ["@media (max-width: 960px)"]: {
+      maxWidth: 360,
+      fontSize: "1.5rem",
+    },
+  },
   paragraphnextline: {
     fontSize: "1rem",
     maxWidth: 460,
@@ -143,7 +151,7 @@ const SecondParagraph = () => {
       <div className={css.endl}></div>
       <div className={css.topic}>원활한 전화통화가</div>
       <div className={css.endl}></div>
-      <div className={css.topic}>힘들 때.</div>
+      <div className={css.topic}>힘들 때</div>
       <div className={css.endl}></div>
       <p className={css.paragraph}>대중교통이나, 카페에서 전화할 때 등등...</p>
       <div className={css.endl}></div>
@@ -170,10 +178,10 @@ const FourthParagraph = () => {
       <div className={css.blackTopic}>활용이 가능할까요?</div>
       <div className={css.endl}></div>
       <div className={css.margin}></div>
-      <p className={css.paragraph}>• 회의 때도 조용하게</p>
-      <p className={css.paragraph}>• 잡음 방해 없는 강의</p>
-      <p className={css.paragraph}>• 선명한 채팅을 통한 즐거운 게이밍</p>
-      <p className={css.paragraph}>• 녹음 파일 잡음 제거</p>
+      <p className={css.paragraphList}>• 회의 때도 조용하게</p>
+      <p className={css.paragraphList}>• 잡음 방해 없는 강의</p>
+      <p className={css.paragraphList}>• 선명한 채팅을 통한 즐거운 게이밍</p>
+      <p className={css.paragraphList}>• 녹음 파일 잡음 제거</p>
       <p className={css.paragraphnextline}></p>
       <p className={css.paragraphnextline}>•</p>
       <p className={css.paragraphnextline}>•</p>
