@@ -120,14 +120,16 @@ const FirstParagraph = () => {
   const css = useStyles();
   return (
     <div className={css.first}>
-      <div className={css.topic}>Noff를</div>
+      <div className={css.topic}>Noff는 어디서든</div>
       <div className={css.endl}></div>
-      <div className={css.topic}>소개합니다.</div>
+      <div className={css.topic}>자유롭게 소통하는</div>
+      <div className={css.endl}></div>
+      <div className={css.topic}>세상을 상상합니다.</div>
       <div className={css.endl}></div>
       <p className={css.paragraph}>
-        Noff란 지하철에서든, 카페에서든 주변 소음 없이 통화하고자 할 때 간단하게
-        통화음에 섞인 소음을 제거할 수 있도록 하는 인공지능 기반 소음제거
-        앱입니다.
+        지하철에서든, 카페에서든 주변 소음 없이 통화하고자 할 때 간단하게
+        통화음에 섞인 소음을 제거할 수 있도록 인공지능 기반 소음제거 앱을
+        제작하고 있습니다.
       </p>
     </div>
   );
