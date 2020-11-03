@@ -3,8 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
   name: {
-    fontSize: "2rem",
+    fontSize: "1.5rem",
     fontWeight: "bold",
+    ["@media (max-width: 960px)"]: {
+      fontSize: "1rem",
+    },
   },
   wrapper: {
     borderTop: "1px solid black",
@@ -26,9 +29,7 @@ const Footer = () => {
   return (
     <div className={css.wrapper}>
       <div className={css.margin}>
-        <div className={css.name}>FROGY</div>
-        <div className={css.name}>BEN</div>
-        <div className={css.name}>YEJANG</div>
+        <div className={css.name}>만든 이: 황웅범, 최제락, 장예은, 위승진</div>
       </div>
     </div>
   );

@@ -24,4 +24,4 @@ const store = createStore(enhancedReducer, applyMiddleware(...middleware));
 
 export default store;
 
-export { default as firebaseConfig } from "./firebase.config";
+// export { default as firebaseConfig } from "./firebase.config";
