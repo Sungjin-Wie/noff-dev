@@ -5,6 +5,7 @@ const useStyles = makeStyles({
   name: {
     fontSize: "1.5rem",
     fontWeight: "bold",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "1rem",
     },
@@ -16,6 +17,7 @@ const useStyles = makeStyles({
     marginTop: 30,
     marginLeft: 50,
     marginBottom: 50,
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       marginTop: 20,
       marginLeft: 15,

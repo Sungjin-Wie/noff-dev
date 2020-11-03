@@ -21,6 +21,7 @@ const useStyles = makeStyles({
   logo: {
     width: "10rem",
     cursor: "pointer",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       width: "5rem",
     },

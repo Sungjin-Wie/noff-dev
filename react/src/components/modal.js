@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inquirybutton: {
     fontSize: "2rem",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "1.5rem",
     },
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButton: {
     fontSize: "1rem",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "1rem",
     },

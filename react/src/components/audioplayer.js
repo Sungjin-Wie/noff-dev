@@ -1,12 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Switch from "@material-ui/core/Switch";
-import {
-  LinearProgress,
-  Box,
-  Typography,
-  makeStyles,
-  IconButton,
-} from "@material-ui/core";
+import { LinearProgress, Box, makeStyles, IconButton } from "@material-ui/core";
 import { withStyles } from "@material-ui/core/styles";
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
 import PauseCircleFilledIcon from "@material-ui/icons/PauseCircleFilled";
@@ -64,12 +58,19 @@ const IOSSwitch = withStyles((theme) => ({
 });
 
 const useStyles = makeStyles({
+  wrapper: {
+    marginTop: -100,
+  },
   progressBar: {
-    width: "60vw",
+    width: "40vw",
     margin: "auto",
     height: 10,
     borderRadius: 5,
     marginTop: 10,
+    // eslint-disable-next-line
+    ["@media (max-width: 960px)"]: {
+      width: "80vw",
+    },
   },
   playButton: {
     width: "4rem",
@@ -78,10 +79,11 @@ const useStyles = makeStyles({
   noff: {
     fontSize: "2rem",
     fontWeight: "bold",
-    color: "black",
+    color: "white",
     display: "inline-block",
     marginLeft: 10,
     marginTop: 10,
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "1.3rem",
     },
@@ -156,7 +158,7 @@ const Player = ({ before, after }) => {
   };
   const normalise = (val) => (val / musicBefore.duration) * 100;
   return (
-    <div>
+    <div className={css.wrapper}>
       <LinearProgressWithLabel
         current={musicBefore.currentTime}
         value={normalise(current)}

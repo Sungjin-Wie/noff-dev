@@ -20,8 +20,12 @@ const useStyles = makeStyles({
   image: {
     margin: "auto",
     width: "60vw",
+    height: "35vw",
+    overflow: "hidden",
+    // eslint-disable-next-line
     ["@media (max-width: 940px)"]: {
       width: "90vw",
+      height: "52.5vw",
     },
   },
   title: {
@@ -29,6 +33,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "black",
     display: "inline-block",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "1.6rem",
     },
@@ -37,22 +42,14 @@ const useStyles = makeStyles({
 
 const NextArrow = ({ className, style, onClick }) => {
   return (
-    <IconButton
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    >
+    <IconButton className={className} style={{ ...style }} onClick={onClick}>
       <ArrowForwardIosIcon />
     </IconButton>
   );
 };
 const PrevArrow = ({ className, style, onClick }) => {
   return (
-    <IconButton
-      className={className}
-      style={{ ...style, display: "block" }}
-      onClick={onClick}
-    >
+    <IconButton className={className} style={{ ...style }} onClick={onClick}>
       <ArrowBackIosIcon />
     </IconButton>
   );
@@ -74,7 +71,7 @@ const SoundSlider = () => {
     <Slider {...settings}>
       <div className={css.imageWrapper}>
         <div className={css.title}>지하철</div>
-        <img className={css.image} src={require("./subway.jpeg")} />
+        <img className={css.image} alt={"img"} src={require("./subway.jpeg")} />
         <Player
           className={css.image}
           before={subwayBefore}
@@ -83,12 +80,12 @@ const SoundSlider = () => {
       </div>
       <div className={css.imageWrapper}>
         <div className={css.title}>카페</div>
-        <img className={css.image} src={require("./cafe.jpeg")} />
+        <img className={css.image} alt={"img"} src={require("./cafe.jpeg")} />
         <Player before={cafeBefore} after={cafeAfter} />
       </div>
       <div className={css.imageWrapper}>
         <div className={css.title}>공원</div>
-        <img className={css.image} src={require("./park.jpg")} />
+        <img className={css.image} alt={"img"} src={require("./park.jpg")} />
         <Player before={parkBefore} after={parkAfter} />
       </div>
     </Slider>

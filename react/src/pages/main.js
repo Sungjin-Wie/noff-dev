@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { SoundSlider } from "../components";
 import Modal from "../components/modal";
@@ -16,6 +16,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "#f7bc26",
     display: "inline-block",
+    // eslint-disable-next-line
     ["@media (max-width: 800px)"]: {
       fontSize: "2.5rem",
     },
@@ -26,6 +27,7 @@ const useStyles = makeStyles({
   paragraph: {
     fontSize: "2rem",
     maxWidth: 460,
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       maxWidth: 360,
       fontSize: "1.5rem",
@@ -34,6 +36,7 @@ const useStyles = makeStyles({
   paragraphList: {
     fontSize: "2rem",
     maxWidth: 540,
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       maxWidth: 360,
       fontSize: "1.5rem",
@@ -42,6 +45,7 @@ const useStyles = makeStyles({
   paragraphnextline: {
     fontSize: "1rem",
     maxWidth: 460,
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       maxWidth: 360,
       fontSize: "0.75rem",
@@ -50,6 +54,7 @@ const useStyles = makeStyles({
   first: {
     marginLeft: "3rem",
     justifyContent: "center",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       marginLeft: "1rem",
     },
@@ -59,6 +64,7 @@ const useStyles = makeStyles({
     marginLeft: "30rem",
     justifyContent: "flex-end",
     marginBottom: "10rem",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       marginLeft: "1rem",
     },
@@ -73,6 +79,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "black",
     display: "inline-block",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "1.5rem",
     },
@@ -82,6 +89,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "black",
     display: "inline-block",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "2.3rem",
     },
@@ -89,6 +97,7 @@ const useStyles = makeStyles({
   fourth: {
     marginTop: "10rem",
     marginLeft: "5vw",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       marginLeft: "0vw",
     },
@@ -101,27 +110,31 @@ const useStyles = makeStyles({
     fontSize: "4rem",
     fontWeight: "bold",
     color: "#6a4e02",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
       fontSize: "2.5rem",
     },
   },
   fifthImg: {
-    width: "30vw",
+    marginTop: 50,
+    width: "40vw",
+    // eslint-disable-next-line
     ["@media (max-width: 960px)"]: {
-      width: "60vw",
+      width: "80vw",
     },
   },
-  inquiry: {
-    textAlign: "center",
-    marginTop: 100,
-    marginBottom: 50,
-  },
-  inquirybutton: {
-    fontSize: "2rem",
-    ["@media (max-width: 960px)"]: {
-      fontSize: "1.5rem",
-    },
-  },
+  // inquiry: {
+  //   textAlign: "center",
+  //   marginTop: 100,
+  //   marginBottom: 50,
+  // },
+  // inquirybutton: {
+  //   fontSize: "2rem",
+  //   // eslint-disable-next-line
+  //   ["@media (max-width: 960px)"]: {
+  //     fontSize: "1.5rem",
+  //   },
+  // },
 });
 
 const FirstParagraph = () => {
@@ -199,7 +212,11 @@ const FifthParagraph = () => {
   return (
     <div className={css.fifth}>
       <div className={css.fifthTopic}>어디서든 내 방처럼,</div>
-      <img className={css.fifthImg} src={require("../components/Noff.png")} />
+      <img
+        className={css.fifthImg}
+        alt={"img"}
+        src={require("../components/Noff.png")}
+      />
     </div>
   );
 };
