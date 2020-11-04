@@ -1,8 +1,25 @@
+@font-face {
+  font-family: "KoPub Dotum Medium";
+  src: url("./components/fonts/KoPub\ Dotum\ Medium.ttf") format("truetype"),
+    url("./components/fonts/KoPub\ Dotum_Pro\ Medium.otf") format("truetype");
+}
+@font-face {
+  font-family: "KoPub Dotum Bold";
+  src: url("./components/fonts/KoPub\ Dotum\ Bold.ttf") format("truetype"),
+    url("./components/fonts/KoPub\ Dotum_Pro\ Bold.otf") format("truetype");
+}
+@font-face {
+  font-family: "KoPub Dotum Light";
+  src: url("./components/fonts/KoPub\ Dotum\ Light.ttf") format("truetype"),
+    url("./components/fonts/KoPub\ Dotum_Pro\ Light.otf") format("truetype");
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "KoPub Dotum Medium", "KoPub Dotum Bold", "KoPub Dotum Light",
+    /* -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif */;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 1280;
@@ -12,8 +29,9 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "KoPub Dotum Medium", "KoPub Dotum Bold", "KoPub Dotum Light",
+    /* source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace */;
 }
 
 #root {
