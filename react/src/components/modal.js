@@ -22,12 +22,11 @@ const useStyles = makeStyles((theme) => ({
   inquiry: {
     textAlign: "center",
     marginTop: 100,
-    marginBottom: 50,
   },
   inquirybutton: {
     fontSize: "2rem",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    marginBottom: 30,
+    "@media (max-width: 960px)": {
       fontSize: "1.5rem",
     },
   },
@@ -37,9 +36,20 @@ const useStyles = makeStyles((theme) => ({
   },
   submitButton: {
     fontSize: "1rem",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       fontSize: "1rem",
+    },
+  },
+  wrapper: {},
+  text: {
+    textAlign: "center",
+    color: "gray",
+    marginBottom: 50,
+    "@media (max-width: 960px)": {
+      fontSize: "1rem",
+      width: "64vw",
+      margin: "auto",
+      marginBottom: 50,
     },
   },
 }));
@@ -78,7 +88,7 @@ export default function TransitionsModal() {
     setOpen(false);
   };
   return (
-    <div>
+    <div className={classes.wrapper}>
       <div className={classes.inquiry}>
         <Button
           className={classes.inquirybutton}
@@ -134,6 +144,10 @@ export default function TransitionsModal() {
           </div>
         </Fade>
       </Modal>
+      <div className={classes.text}>
+        Noff에 대해 궁금한 점과 솔직한 의견이 있으시면 위의 링크를 눌러
+        남겨주세요.
+      </div>
     </div>
   );
 }

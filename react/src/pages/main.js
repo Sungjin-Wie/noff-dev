@@ -16,8 +16,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "#f7bc26",
     display: "inline-block",
-    // eslint-disable-next-line
-    ["@media (max-width: 800px)"]: {
+    "@media (max-width: 800px)": {
       fontSize: "2.5rem",
     },
   },
@@ -27,8 +26,7 @@ const useStyles = makeStyles({
   paragraph: {
     fontSize: "2rem",
     maxWidth: 460,
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       maxWidth: 360,
       fontSize: "1.5rem",
     },
@@ -36,8 +34,7 @@ const useStyles = makeStyles({
   paragraphList: {
     fontSize: "2rem",
     maxWidth: 540,
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       maxWidth: 360,
       fontSize: "1.5rem",
     },
@@ -45,8 +42,7 @@ const useStyles = makeStyles({
   paragraphnextline: {
     fontSize: "1rem",
     maxWidth: 460,
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       maxWidth: 360,
       fontSize: "0.75rem",
     },
@@ -54,8 +50,7 @@ const useStyles = makeStyles({
   first: {
     marginLeft: "3rem",
     justifyContent: "center",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       marginLeft: "1rem",
     },
   },
@@ -89,16 +84,14 @@ const useStyles = makeStyles({
     fontWeight: "bold",
     color: "black",
     display: "inline-block",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       fontSize: "2.3rem",
     },
   },
   fourth: {
     marginTop: "10rem",
     marginLeft: "5vw",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       marginLeft: "0vw",
     },
   },
@@ -110,16 +103,14 @@ const useStyles = makeStyles({
     fontSize: "4rem",
     fontWeight: "bold",
     color: "#6a4e02",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       fontSize: "2.5rem",
     },
   },
   fifthImg: {
     marginTop: 50,
     width: "40vw",
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       width: "80vw",
     },
   },
@@ -130,11 +121,13 @@ const useStyles = makeStyles({
   // },
   // inquirybutton: {
   //   fontSize: "2rem",
-  //   // eslint-disable-next-line
-  //   ["@media (max-width: 960px)"]: {
+  //   "@media (max-width: 960px)": {
   //     fontSize: "1.5rem",
   //   },
   // },
+  aboutInquiry: {
+    fontSize: "1rem",
+  },
 });
 
 const FirstParagraph = () => {
