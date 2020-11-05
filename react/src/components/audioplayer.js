@@ -67,8 +67,7 @@ const useStyles = makeStyles({
     height: 10,
     borderRadius: 5,
     marginTop: 10,
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       width: "80vw",
     },
   },
@@ -83,8 +82,7 @@ const useStyles = makeStyles({
     display: "inline-block",
     marginLeft: 10,
     marginTop: 10,
-    // eslint-disable-next-line
-    ["@media (max-width: 960px)"]: {
+    "@media (max-width: 960px)": {
       fontSize: "1.3rem",
     },
   },
@@ -117,11 +115,6 @@ function LinearProgressWithLabel({ current, value }) {
         variant="determinate"
         value={value}
       />
-      {/* <Box minWidth={35}>
-        <Typography variant="body2" color="textSecondary">{`00:${
-          current < 10 ? "0" : ""
-        }${Math.floor(current)}`}</Typography>
-      </Box> */}
     </Box>
   );
 }

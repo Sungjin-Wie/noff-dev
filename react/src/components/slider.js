@@ -114,7 +114,6 @@ const SoundSlider = () => {
 
   return (
     <>
-      {/* <div className={css.arrows}> */}
       <PrevArrow
         className={css.prev}
         onClick={() => slider?.current?.slickPrev()}
@@ -123,12 +122,6 @@ const SoundSlider = () => {
         className={css.next}
         onClick={() => slider?.current?.slickNext()}
       />
-      {/* </div> */}
-      {/* <div className={css.list}>
-        <div>SUBWAY</div>
-        <div>CAFE</div>
-        <div>PARK</div>
-      </div> */}
       <Slider ref={slider} {...settings}>
         <div className={css.imageWrapper}>
           <div className={css.title}>지하철</div>
