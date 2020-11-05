@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 var cors = require("cors");
-const { default: axios } = require("axios");
 var fetch = require("node-fetch");
 
 let sheet =
@@ -22,6 +21,7 @@ router.get("/", cors(), function (req, response, next) {
     .then((data) => {
       // The response comes here
       console.log(data);
+      response.send(data);
     })
     .catch((error) => {
       // Errors are reported there
